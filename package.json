@@ -1,0 +1,93 @@
+{
+  "name": "tool-set",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "cross-env RUN_ENV=dev PUBLIC_PATH=/ webpack serve --config ./build/webpack.dev.config.js --progress",
+    "build": "cross-env RUN_ENV=prd PUBLIC_PATH=/ webpack --config ./build/webpack.build.config.js --progress",
+    "lint": "stylelint \"**/*.{css,less,sass,vue}\" --fix",
+    "prettier": "prettier --write .",
+    "test": "pnpm exec lint-staged",
+    "prepare": "husky",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix"
+    ],
+    "*.{scss,stylus,less,css}": [
+      "stylelint --fix"
+    ],
+    "**/*": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "dependencies": {
+    "core-js": "3.35.1",
+    "normalize.css": "8.0.1",
+    "pinia": "2.1.7",
+    "vant": "4.8.4",
+    "vue": "3.4.16",
+    "vue-router": "4.2.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.23.9",
+    "@babel/plugin-transform-runtime": "7.23.9",
+    "@babel/preset-env": "7.23.9",
+    "@vant/auto-import-resolver": "^1.0.2",
+    "@vue/compiler-sfc": "3.4.16",
+    "amfe-flexible": "2.2.1",
+    "babel-loader": "9.1.3",
+    "compression-webpack-plugin": "11.0.0",
+    "copy-webpack-plugin": "12.0.2",
+    "cross-env": "7.0.3",
+    "css-loader": "6.10.0",
+    "css-minimizer-webpack-plugin": "6.0.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-vue": "9.21.1",
+    "html-webpack-plugin": "5.6.0",
+    "husky": "9.0.10",
+    "less": "4.2.0",
+    "less-loader": "12.2.0",
+    "lint-staged": "15.2.2",
+    "mini-css-extract-plugin": "2.8.0",
+    "node-polyfill-webpack-plugin": "3.0.0",
+    "postcss": "8.4.35",
+    "postcss-html": "1.6.0",
+    "postcss-loader": "8.1.0",
+    "postcss-preset-env": "9.3.0",
+    "postcss-pxtorem": "6.1.0",
+    "postcss-scss": "4.0.9",
+    "prettier": "3.2.5",
+    "sass": "1.70.0",
+    "sass-loader": "14.1.0",
+    "stylelint": "16.2.1",
+    "stylelint-config-html": "1.1.0",
+    "stylelint-config-recommended": "14.0.0",
+    "stylelint-config-recommended-less": "3.0.1",
+    "stylelint-config-recommended-scss": "14.0.0",
+    "stylelint-config-recommended-vue": "1.5.0",
+    "stylelint-config-standard": "36.0.0",
+    "stylelint-config-standard-scss": "13.0.0",
+    "stylelint-order": "6.0.4",
+    "stylus": "0.62.0",
+    "stylus-loader": "8.1.0",
+    "unplugin-vue-components": "0.26.0",
+    "vue-loader": "17.4.2",
+    "vue-style-loader": "4.1.3",
+    "webpack": "5.90.1",
+    "webpack-bundle-analyzer": "4.10.1",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "4.15.1",
+    "webpack-merge": "5.10.0"
+  }
+}
