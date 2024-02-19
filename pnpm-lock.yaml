@@ -34,9 +34,6 @@ devDependencies:
   '@babel/preset-env':
     specifier: 7.23.9
     version: 7.23.9(@babel/core@7.23.9)
-  '@vant/auto-import-resolver':
-    specifier: 1.0.2
-    version: 1.0.2
   '@vue/compiler-sfc':
     specifier: 3.4.19
     version: 3.4.19
@@ -154,9 +151,6 @@ devDependencies:
   stylus-loader:
     specifier: 8.1.0
     version: 8.1.0(stylus@0.62.0)(webpack@5.90.2)
-  unplugin-vue-components:
-    specifier: 0.26.0
-    version: 0.26.0(vue@3.4.19)
   vue-loader:
     specifier: 17.4.2
     version: 17.4.2(@vue/compiler-sfc@3.4.19)(vue@3.4.19)(webpack@5.90.2)
@@ -204,13 +198,6 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.20
-    dev: true
-
-  /@antfu/utils@0.7.7:
-    resolution:
-      {
-        integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==,
-      }
     dev: true
 
   /@babel/code-frame@7.23.4:
@@ -2580,23 +2567,6 @@ packages:
       }
     dev: true
 
-  /@rollup/pluginutils@5.1.0:
-    resolution:
-      {
-        integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==,
-      }
-    engines: { node: '>=14.0.0' }
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@types/estree': 1.0.5
-      estree-walker: 2.0.2
-      picomatch: 2.3.1
-    dev: true
-
   /@sinclair/typebox@0.27.8:
     resolution:
       {
@@ -2885,13 +2855,6 @@ packages:
     resolution:
       {
         integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==,
-      }
-    dev: true
-
-  /@vant/auto-import-resolver@1.0.2:
-    resolution:
-      {
-        integrity: sha512-5SYC1izl36KID+3F4pqFtYD8VFK6m1pdulft99sjSkUN4GBX9OslRnsJA0g7xS+0YrytjDuxxBk04YLYIxaYMg==,
       }
     dev: true
 
@@ -7052,14 +7015,6 @@ packages:
       json5: 1.0.2
     dev: true
 
-  /local-pkg@0.4.3:
-    resolution:
-      {
-        integrity: sha512-SFppqq5p42fe2qcZQqqEOiVRXl+WCP1MdT6k7BDEW1j++sp5fIY+/fdRQitvKgB5BrBcmrs5m/L0v2FrU5MY1g==,
-      }
-    engines: { node: '>=14' }
-    dev: true
-
   /locate-path@5.0.0:
     resolution:
       {
@@ -7180,16 +7135,6 @@ packages:
     engines: { node: '>=10' }
     dependencies:
       yallist: 4.0.0
-    dev: true
-
-  /magic-string@0.30.5:
-    resolution:
-      {
-        integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==,
-      }
-    engines: { node: '>=12' }
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
   /magic-string@0.30.7:
@@ -10733,50 +10678,6 @@ packages:
     engines: { node: '>= 0.8' }
     dev: true
 
-  /unplugin-vue-components@0.26.0(vue@3.4.19):
-    resolution:
-      {
-        integrity: sha512-s7IdPDlnOvPamjunVxw8kNgKNK8A5KM1YpK5j/p97jEKTjlPNrA0nZBiSfAKKlK1gWZuyWXlKL5dk3EDw874LQ==,
-      }
-    engines: { node: '>=14' }
-    peerDependencies:
-      '@babel/parser': ^7.15.8
-      '@nuxt/kit': ^3.2.2
-      vue: 2 || 3
-    peerDependenciesMeta:
-      '@babel/parser':
-        optional: true
-      '@nuxt/kit':
-        optional: true
-    dependencies:
-      '@antfu/utils': 0.7.7
-      '@rollup/pluginutils': 5.1.0
-      chokidar: 3.5.3
-      debug: 4.3.4
-      fast-glob: 3.3.2
-      local-pkg: 0.4.3
-      magic-string: 0.30.5
-      minimatch: 9.0.3
-      resolve: 1.22.8
-      unplugin: 1.7.1
-      vue: 3.4.19
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
-  /unplugin@1.7.1:
-    resolution:
-      {
-        integrity: sha512-JqzORDAPxxs8ErLV4x+LL7bk5pk3YlcWqpSNsIkAZj972KzFZLClc/ekppahKkOczGkwIG6ElFgdOgOlK4tXZw==,
-      }
-    dependencies:
-      acorn: 8.11.3
-      chokidar: 3.5.3
-      webpack-sources: 3.2.3
-      webpack-virtual-modules: 0.6.1
-    dev: true
-
   /update-browserslist-db@1.0.13(browserslist@4.22.1):
     resolution:
       {
@@ -11174,13 +11075,6 @@ packages:
         integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==,
       }
     engines: { node: '>=10.13.0' }
-    dev: true
-
-  /webpack-virtual-modules@0.6.1:
-    resolution:
-      {
-        integrity: sha512-poXpCylU7ExuvZK8z+On3kX+S8o/2dQ/SVYueKA0D4WEMXROXgY8Ez50/bQEUmvoSMMrWcrJqCHuhAbsiwg7Dg==,
-      }
     dev: true
 
   /webpack@5.90.2(webpack-cli@5.1.4):

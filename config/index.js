@@ -8,7 +8,7 @@ console.log('process.env.PUBLIC_PATH=', process.env.PUBLIC_PATH);
 const proxyConfig = proxyConfigs.get('dev');
 module.exports = {
   dev: {
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 9999,
     assetsSubDirectory: '',
     assetsPublicPath: '/',

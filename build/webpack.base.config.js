@@ -2,9 +2,6 @@
 const path = require('node:path');
 const { VueLoaderPlugin } = require('vue-loader');
 const NodePolyfillWebpackPlugin = require('node-polyfill-webpack-plugin');
-// const vueLoaderConfig = require('./vue-loader.config');
-const { VantResolver } = require('@vant/auto-import-resolver');
-const ComponentsPlugin = require('unplugin-vue-components/webpack');
 const config = require('../config');
 const { resolve } = require('./utils');
 
@@ -49,10 +46,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    ComponentsPlugin.default({ resolvers: [VantResolver()] }),
-    new VueLoaderPlugin(),
-    new NodePolyfillWebpackPlugin(),
-  ],
+  plugins: [new VueLoaderPlugin(), new NodePolyfillWebpackPlugin()],
   target: 'browserslist',
 };

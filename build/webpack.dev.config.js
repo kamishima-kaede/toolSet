@@ -94,7 +94,7 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       template: 'public/index.html',
-      title: 'hello world',
+      title: 'tool set',
       scriptLoading: 'defer',
     }),
   ],

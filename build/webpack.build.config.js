@@ -96,12 +96,12 @@ const webpackConfig = merge(baseWebpackConfig, {
       'process.env': EnvConfig,
       __VUE_OPTIONS_API__: false,
       __VUE_PROD_DEVTOOLS__: false,
-      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'public/index.html',
-      title: 'hello world',
+      title: 'tool set',
       inject: true,
       minify: true,
       chunksSortMode: 'auto',

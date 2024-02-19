@@ -14,5 +14,8 @@
       "customSyntax": "postcss-html"
     }
   ],
-  "rules": {}
+  "rules": {
+    "no-empty-source": null,
+    "font-family-no-missing-generic-family-keyword": null
+  }
 }
