@@ -1,0 +1,12 @@
+[
+  {
+    "name": "日历",
+    "icon": "calendar",
+    "path": "/calendar"
+  },
+  {
+    "name": "油价查询",
+    "icon": "gasoline",
+    "path": "/gasoline"
+  }
+]

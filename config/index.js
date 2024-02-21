@@ -15,6 +15,7 @@ module.exports = {
     devtool: 'eval-cheap-module-source-map',
     cssSourceMap: true,
     autoOpenBrowser: false,
+    errorOverlay: true,
     proxyTable: {
       '/api': {
         target: proxyConfig.targetAddr,

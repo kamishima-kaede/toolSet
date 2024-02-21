@@ -12,11 +12,12 @@ module.exports = merge(baseWebpackConfig, {
   devtool: config.dev.devtool,
   devServer: {
     hot: true,
-    open: true,
+    open: config.dev.autoOpenBrowser,
     host: config.dev.host,
-    port: config.dev.port || 10086,
+    port: config.dev.port || 9999,
     client: {
       logging: 'info',
+      progress: false,
       overlay: config.dev.errorOverlay
         ? {
             warnings: false,
@@ -24,10 +25,11 @@ module.exports = merge(baseWebpackConfig, {
           }
         : false,
     },
-    // static: {},
+    static: {
+      directory: resolve('../public'),
+    },
     compress: true,
     historyApiFallback: true,
-    open: config.dev.autoOpenBrowser,
   },
   module: {
     rules: [
