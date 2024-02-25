@@ -11,6 +11,9 @@ dependencies:
   dayjs:
     specifier: 1.11.10
     version: 1.11.10
+  lunisolar:
+    specifier: ^2.4.0
+    version: 2.4.0
   normalize.css:
     specifier: 8.0.1
     version: 8.0.1
@@ -7177,6 +7180,13 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /lunisolar@2.4.0:
+    resolution:
+      {
+        integrity: sha512-F1j0iNRztO4Ozh3w0h8PUj0DhDwbfqMIhaj58ehwBNCZt7SSpZ7Dzqs46O21EqSlm7TfJRj7mWdkG2jlFtWkDA==,
+      }
+    dev: false
 
   /magic-string@0.30.7:
     resolution:

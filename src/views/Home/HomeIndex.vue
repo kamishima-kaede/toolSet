@@ -36,7 +36,7 @@
       width: 25%;
       margin-top: 18px;
       .iconfont {
-        color: rgb(44, 150, 120);
+        color: #2c9678;
         font-size: 32px;
       }
       .name {
