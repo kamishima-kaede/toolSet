@@ -69,7 +69,7 @@
     "postcss-pxtorem": "6.1.0",
     "postcss-scss": "4.0.9",
     "prettier": "3.2.5",
-    "sass": "1.71.0",
+    "sass": "1.74.1",
     "sass-loader": "14.1.1",
     "stylelint": "16.2.1",
     "stylelint-config-html": "1.1.0",
