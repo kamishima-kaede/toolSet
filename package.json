@@ -37,7 +37,7 @@
     "pinia": "2.1.7",
     "vant": "4.8.4",
     "vue": "3.4.19",
-    "vue-router": "4.2.5"
+    "vue-router": "4.3.2"
   },
   "devDependencies": {
     "@babel/core": "7.23.9",
