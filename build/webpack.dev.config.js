@@ -14,7 +14,7 @@ module.exports = merge(baseWebpackConfig, {
     hot: true,
     open: config.dev.autoOpenBrowser,
     host: config.dev.host,
-    port: config.dev.port || 9999,
+    port: config.dev.port || 50000,
     client: {
       logging: 'info',
       progress: false,

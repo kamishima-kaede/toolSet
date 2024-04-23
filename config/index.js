@@ -9,7 +9,7 @@ const proxyConfig = proxyConfigs.get('dev');
 module.exports = {
   dev: {
     host: '0.0.0.0',
-    port: 9999,
+    port: 50000,
     assetsSubDirectory: '',
     assetsPublicPath: '/',
     devtool: 'eval-cheap-module-source-map',
