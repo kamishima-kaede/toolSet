@@ -35,7 +35,7 @@
     "lunisolar": "2.5.0",
     "normalize.css": "8.0.1",
     "pinia": "2.1.7",
-    "vant": "4.8.11",
+    "vant": "4.9.0",
     "vue": "3.4.24",
     "vue-router": "4.3.2"
   },
