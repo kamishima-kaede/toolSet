@@ -36,7 +36,7 @@
     "normalize.css": "8.0.1",
     "pinia": "2.1.7",
     "vant": "4.8.11",
-    "vue": "3.4.24",
+    "vue": "3.4.26",
     "vue-router": "4.3.2"
   },
   "devDependencies": {
