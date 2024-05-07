@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-const ASSETSPUBLICPATH = process.env.PUBLIC_PATH || '';
+const ASSETSPUBLICPATH = process.env.PUBLIC_PATH ? `${process.env.PUBLIC_PATH}/` : '';
 
 const Home = () => import(/* webpackChunkName: "Home" */ '@/views/Home/HomeIndex');
 // 油价查询
