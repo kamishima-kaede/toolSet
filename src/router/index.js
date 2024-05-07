@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+const ASSETSPUBLICPATH = process.env.PUBLIC_PATH || '';
 
 const Home = () => import(/* webpackChunkName: "Home" */ '@/views/Home/HomeIndex');
 // 油价查询
@@ -16,7 +17,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory({ base: ASSETSPUBLICPATH }),
   routes,
   scrollBehavior() {
     // 始终滚动到顶部
