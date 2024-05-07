@@ -17,9 +17,9 @@ jobs:
           fetch-depth: 0
           # 如果你文档需要 Git 子模块，取消注释下一行
           # submodules: true
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v2.2.4
         with:
-          version: 9
+          version: 8
 
       - name: Set Node Version
         uses: actions/setup-node@v3
