@@ -14,7 +14,7 @@ module.exports = {
     assetsPublicPath: '/',
     devtool: 'eval-cheap-module-source-map',
     cssSourceMap: true,
-    autoOpenBrowser: false,
+    autoOpenBrowser: true,
     errorOverlay: true,
     proxyTable: {
       '/api': {

@@ -5,6 +5,7 @@
       left-arrow
       @click-left="router.go(-1)"
       :safe-area-inset-top="true"
+      :safe-area-inset-bottom="true"
       :fixed="true"
       :placeholder="true"
     />
@@ -92,27 +93,33 @@
 <style lang="less" scoped>
   .wrap-content {
     padding: 0 10px;
+
     .header {
       display: flex;
       align-items: center;
+
       > i {
         font-size: 11px;
       }
     }
+
     .calendar {
       :deep(.van-calendar__header) {
         box-shadow: none;
       }
+
       .title {
         padding: 0 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         .select-month {
           font-weight: normal;
           color: #2c9678;
         }
       }
+
       :deep(.van-calendar__header-subtitle) {
         display: none;
       }

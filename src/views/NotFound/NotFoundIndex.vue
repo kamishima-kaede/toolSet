@@ -32,16 +32,20 @@
     flex-flow: column;
     padding: 0 30px;
     align-items: center;
+
     .text {
       margin-top: 13vh;
       font-size: 30px;
     }
+
     .iconfont {
       font-size: 240px;
     }
+
     .text2 {
       font-size: 14px;
     }
+
     .button {
       margin-top: 5vh;
     }

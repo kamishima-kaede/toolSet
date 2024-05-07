@@ -16,6 +16,13 @@
   ],
   "rules": {
     "no-empty-source": null,
-    "font-family-no-missing-generic-family-keyword": null
+    "font-family-no-missing-generic-family-keyword": null,
+    "selector-class-pattern": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["deep"]
+      }
+    ]
   }
 }
