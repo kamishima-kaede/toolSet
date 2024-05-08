@@ -138,7 +138,6 @@
 
       .nongli-right {
         margin-top: 4.5px;
-        width: 180px;
         display: flex;
         flex-flow: column;
         justify-content: center;

@@ -5,7 +5,10 @@ import lunisolar from 'lunisolar';
 export default function () {
   const columnsType = ['year', 'month'];
   const calendar = ref();
-  const lunisolarDay = ref(lunisolar(new Date()).format('lM(lL)lD'));
+  const solarTerm = lunisolar(new Date()).solarTerm
+  const nowLunisolar = lunisolar(new Date()).format('lM(lL)lD')
+  const lunisolarStr = solarTerm ? `${nowLunisolar} ${solarTerm}` : `${nowLunisolar}`
+  const lunisolarDay = ref(lunisolarStr);
   // 初始化日期选择器
   const nowDate = ref(dayjs().format('YYYY-MM'));
   let days = dayjs().daysInMonth();
@@ -19,7 +22,10 @@ export default function () {
   const showBottom = ref(false);
   const getLunisolarDay = () => {
     const day = calendar.value.getSelectedDate();
-    lunisolarDay.value = lunisolar(day).format('lM(lL)lD');
+    const solarTerm = lunisolar(day).solarTerm
+    const dayLunisolar = lunisolar(day).format('lM(lL)lD')
+    const lunisolarStr = solarTerm ? `${dayLunisolar} ${solarTerm}` : `${dayLunisolar}`
+    lunisolarDay.value = lunisolarStr;
   };
   const handleConfirm = ({ selectedValues }) => {
     nowDate.value = selectedValues.join('-');
