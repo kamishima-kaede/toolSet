@@ -7,12 +7,29 @@ const GasOline = () => import(/* webpackChunkName: "GasOline" */ '@/views/GasOli
 const Calendar = () => import(/* webpackChunkName: "Calendar" */ '@/views/Calendar/CalendarIndex');
 const NotFound = () => import(/* webpackChunkName: "NotFound" */ '@/views/NotFound/NotFoundIndex');
 
-const routes = [
+export const routes = [
   { path: '/', redirect: '/home' },
   { path: '/home', name: 'home', component: Home },
-  { path: '/gasoline', name: 'gasoline', component: GasOline },
-  { path: '/calendar', name: 'calendar', component: Calendar },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+  {
+    path: '/calendar',
+    name: 'calendar',
+    component: Calendar,
+    meta: {
+      name: '日历',
+      icon: 'calendar',
+    },
+  },
+  {
+    path: '/gasoline',
+    name: 'gasoline',
+    component: GasOline,
+    meta: {
+      name: '油价查询',
+      icon: 'gasoline',
+    },
+  },
+  { path: '/404', name: 'NotFound', component: NotFound },
+  { path: '/:pathMatch(.*)*', redirect: '/404' },
 ];
 
 const router = createRouter({

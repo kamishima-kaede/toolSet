@@ -1,21 +1,32 @@
 import lunisolar from 'lunisolar';
 import dayjs from 'dayjs';
-// import { ref } from 'vue';
 import holiday from './holiday.json';
+
 export default function () {
-  // const nowDate1 = ref(dayjs().format('YYYY/MM/DD'));
   const formatter = day => {
     const { date } = day;
-    day.bottomInfo = lunisolar(date).format('lD');
+    console.log();
+    const solarTerm = lunisolar(date).solarTerm
+    day.bottomInfo = solarTerm ? solarTerm.name : lunisolar(date).format('lD');
     const dateValue = dayjs(date).format('YYYY-MM-DD');
+    const getDay = date.getDay();
+    if (getDay === 0 || getDay === 6) {
+      day.className = 'holiday';
+    }
     holiday.days.forEach(item => {
       if (dateValue === item.date) {
-        day.topInfo = item.name;
+        if (item.isOffDay) {
+          day.topInfo = item.name;
+          day.className = 'holiday';
+        } else {
+          day.className = '';
+        }
       }
     });
     return day;
   };
+
   return {
-    formatter,
+    formatter
   };
 }

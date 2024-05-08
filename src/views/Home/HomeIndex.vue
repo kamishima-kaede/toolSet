@@ -10,11 +10,15 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
   import { useRouter } from 'vue-router';
-  import data from '@/views/Home/apps.json';
+  import { routes } from '@/router';
 
-  const apps = ref(data);
+  const apps = routes
+    .filter(item => item.meta)
+    .map(({ meta, path }) => {
+      return { ...meta, path };
+    });
+
   const router = useRouter();
   const goto = item => {
     const { path } = item;
